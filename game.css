@@ -1,0 +1,236 @@
+.game-page{padding:55px 7vw 100px}.back{font:10px "DM Mono";color:var(--cyan)}.game-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;padding:45px 0 25px}.game-heading h1{font-family:"Press Start 2P";font-size:clamp(32px,5vw,64px);margin:15px 0;line-height:1.4}.game-heading p{color:var(--muted);margin:0}.scorebox{font:9px "DM Mono";color:var(--muted);border:1px solid var(--gline);padding:13px 16px}.scorebox b{display:block;color:var(--yellow);font-size:20px;margin-top:6px}.cabinet{background:#0d102c;border:2px solid #2b3059;padding:18px;box-shadow:10px 10px 0 var(--purple);max-width:900px;margin:auto}.screen{background:#05081c;border:7px solid #252944;min-height:520px;display:grid;place-items:center;padding:20px}.controls{max-width:900px;margin:35px auto 0;color:var(--muted);font:10px "DM Mono";line-height:1.8}.play-ui{text-align:center;width:min(760px,100%);margin:auto}.game-canvas{display:block;margin:auto;background:#070a20;border:1px solid #32385e;max-width:100%}.hud{display:flex;justify-content:space-between;gap:20px;margin-bottom:12px;font:10px "DM Mono";color:var(--muted)}.hud b{color:var(--yellow)}.action-btn{background:var(--pink);border:0;color:white;padding:12px 18px;font:10px "DM Mono";cursor:pointer;margin-top:16px}.touch{display:flex;justify-content:center;gap:8px;margin-top:12px}.touch button{background:#151943;border:1px solid #363b66;color:white;width:44px;height:38px;font-size:18px}.puzzle-grid{display:grid;grid-template-columns:repeat(4,75px);gap:7px;justify-content:center}.tile{height:75px;border:1px solid #30355c;background:#151943;color:white;font-size:24px;cursor:pointer}.memory-grid{display:grid;grid-template-columns:repeat(4,75px);gap:8px;justify-content:center}.memory-card{height:75px;background:#141943;border:1px solid #343a67;color:transparent;font-size:25px;cursor:pointer}.memory-card.open{color:white;background:#7b29d9}.reaction{width:min(500px,100%);height:280px;display:grid;place-items:center;background:#171a3d;color:#b8bad0;font:11px "DM Mono";cursor:pointer}.reaction.wait{background:#ff218c;color:white}.reaction.go{background:#4aaf55;color:white}.racing{position:relative;width:330px;height:440px;max-width:100%;overflow:hidden;background:#252b43;border:2px solid #3d4365;margin:auto}.road-lines{position:absolute;inset:-100% 0;background:repeating-linear-gradient(90deg,transparent 0 75px,#dfe2e7 76px 82px,transparent 83px 150px);width:50%;left:25%;animation:road 1s linear infinite}@keyframes road{to{transform:translateY(160px)}}.car{position:absolute;bottom:35px;left:calc(50% - 22px);width:44px;height:72px;background:var(--pink);border:5px solid #101329;box-shadow:0 0 20px #ff218c}.enemy{position:absolute;width:44px;height:72px;background:var(--cyan);top:20px;left:70px}.modal-msg{font:11px "DM Mono";color:var(--yellow);margin-top:15px}@media(max-width:700px){.game-heading{display:block}.scorebox{display:inline-block;margin-top:20px}.screen{min-height:430px}.puzzle-grid,.memory-grid{grid-template-columns:repeat(4,60px)}.tile,.memory-card{height:60px}}
+
+.neon-wrap{position:relative;width:min(720px,100%);margin:auto}.neon-wrap .game-canvas{width:100%;height:auto}
+.center-message{position:absolute;inset:0;display:grid;place-content:center;text-align:center;background:radial-gradient(circle,#10174766,transparent 70%);pointer-events:none}.center-message.hidden{display:none}.center-message .action-btn{pointer-events:auto}
+.pixel-title{font-family:"Press Start 2P";font-size:26px;line-height:1.6;text-shadow:4px 4px 0 #ff218c}.small-title{font-size:20px}.message-sub{font:9px "DM Mono";color:#08d9ff;letter-spacing:.12em;margin:13px 0}.count-number,.go-text{font-family:"Press Start 2P";font-size:58px;color:#ffd11a;text-shadow:5px 5px #ff218c;animation:countPop .55s ease-out}.go-text{color:#8cf126;font-size:42px}.final-score{font:28px "Press Start 2P";color:#08d9ff;margin:16px;text-shadow:3px 3px #8d35ff}@keyframes countPop{0%{transform:scale(.5);opacity:0}55%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}
+.game-actions{display:flex;justify-content:center;gap:8px;margin-top:12px}.action-btn.small{font-size:9px;margin-top:0}.action-btn.ghost{background:transparent;border:1px solid #343a67}.hud span:last-child b{color:#ff218c}
+@media(max-width:700px){.pixel-title{font-size:18px}.count-number{font-size:45px}}
+
+/* V7 — game presentation polish */
+.game-page{max-width:1250px;margin:auto}.cabinet{max-width:980px}.screen{box-shadow:inset 0 0 45px #080b29,0 0 35px #8d35ff12}.action-btn{transition:transform .16s ease,box-shadow .16s ease}.action-btn:hover{transform:translateY(-2px);box-shadow:4px 4px 0 #71104e}.action-btn:active{transform:translateY(1px)}.hud b{font-variant-numeric:tabular-nums}.game-canvas{image-rendering:auto}
+.forest-tile span{display:inline-block;animation:gemFloat 1.8s ease-in-out infinite}.forest-tile:nth-child(3n) span{animation-delay:-.5s}.forest-tile:nth-child(4n) span{animation-delay:-1s}@keyframes gemFloat{50%{transform:translateY(-3px) rotate(8deg)}}
+.color-tile{font-family:"Press Start 2P"}.color-tile::after{content:""}.racing{box-shadow:inset 0 0 45px #0008}.car{box-shadow:0 0 20px #ff218c}.enemy{box-shadow:0 0 20px #08d9ff}
+
+.turbo-wrap{background:#070a20;border:1px solid #30345c;padding:0;box-shadow:0 0 0 5px #10132d,0 0 35px #8d35ff22;overflow:hidden}
+.turbo-wrap .game-canvas{display:block;width:100%;height:auto;image-rendering:pixelated}
+.turbo-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#ff218c08,transparent 25%,transparent 75%,#08d9ff08);z-index:1}
+
+.sky-wrap{background:#05081c;border:1px solid #30345c;box-shadow:0 0 0 5px #10132d,0 0 35px #08d9ff18;overflow:hidden}
+.sky-wrap .game-canvas{display:block;width:100%;height:auto;image-rendering:pixelated}
+
+/* =========================================================
+   COLOR SWAP V2 — clearer tutorial + visual board
+   ========================================================= */
+.color-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:14px}
+.game-kicker{font:9px "DM Mono";letter-spacing:.14em;color:#08d9ff;margin-bottom:9px}
+.color-instructions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font:9px "DM Mono";color:#dfe5f4}
+.color-instructions .step{display:inline-flex;align-items:center;gap:6px}
+.color-instructions b{display:grid;place-items:center;width:20px;height:20px;border:1px solid #08d9ff;color:#08d9ff;font-size:9px}
+.color-instructions .arrow{color:#8d35ff;font-size:13px}
+.color-legend{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;font:8px "DM Mono";color:#aab0ca}
+.legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;box-shadow:0 0 8px currentColor}
+.legend-dot.pink{background:#ff218c;color:#ff218c}.legend-dot.cyan{background:#08d9ff;color:#08d9ff}.legend-dot.lime{background:#8cf126;color:#8cf126}.legend-dot.yellow{background:#ffd11a;color:#ffd11a}
+.color-status{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:620px;margin:0 auto 13px;padding:8px 12px;background:#0c1030;border:1px solid #282d54;box-shadow:inset 0 0 22px #0005}
+.color-status>div{text-align:center;border-right:1px solid #252a4c}.color-status>div:last-child{border-right:0}
+.color-status small{display:block;font:7px "DM Mono";letter-spacing:.14em;color:#7e86a7;margin-bottom:5px}.color-status b{font:14px "Press Start 2P";color:#ffd11a;text-shadow:2px 2px #ff218c}.color-status .combo-box b{color:#8cf126}
+.color-wrap{position:relative;padding:22px;min-height:430px;background:radial-gradient(circle at 50% 42%,#171d4a 0,#0a0e29 55%,#070a20 100%);border:1px solid #30345c;box-shadow:inset 0 0 40px #0008,0 0 0 5px #10132d;overflow:hidden}
+.color-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#ff218c07,transparent 35%,transparent 65%,#08d9ff07)}
+.color-board{position:relative;z-index:2;display:grid;grid-template-columns:repeat(6,minmax(48px,70px));gap:8px;justify-content:center;align-content:center;max-width:500px;margin:14px auto}
+.color-tile{position:relative;aspect-ratio:1;border:1px solid #454b72;background:linear-gradient(145deg,#1b2044,#0f1330);color:var(--tile);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 0 15px #0008,0 4px 0 #080b20;transition:transform .12s,border-color .12s,box-shadow .12s,filter .12s}
+.color-tile:after{content:"";position:absolute;inset:4px;border:1px solid rgb(var(--tile-rgb),.15);pointer-events:none}
+.color-tile .tile-shape{font-size:25px;line-height:1;text-shadow:0 0 12px var(--tile)}
+.color-tile small{font:6px "DM Mono";letter-spacing:.08em;color:#7e86a7}
+.color-tile:hover{transform:translateY(-3px);border-color:var(--tile);box-shadow:0 0 18px rgb(var(--tile-rgb),.3),inset 0 0 15px #0008}
+.color-tile.selected{transform:translateY(-4px) scale(1.06);border:2px solid #fff;box-shadow:0 0 0 3px var(--tile),0 0 25px var(--tile);z-index:3}
+.color-tile.possible:not(.selected){border-color:#ffffff77;animation:colorHint .65s ease-in-out infinite alternate}
+@keyframes colorHint{to{transform:translateY(-2px);box-shadow:0 0 13px rgb(var(--tile-rgb),.35)}}
+.color-tile.clearing{animation:colorClear .23s ease-out forwards}
+@keyframes colorClear{to{transform:scale(1.35);opacity:0;filter:brightness(2)}}
+.color-toast{position:absolute;z-index:4;left:50%;top:10px;transform:translateX(-50%);font:8px "DM Mono";letter-spacing:.12em;color:#9ca5c8;transition:.2s;white-space:nowrap}
+.color-toast.good{color:#8cf126;text-shadow:0 0 10px #8cf126}.color-toast.bad{color:#ff218c}.color-toast.info{color:#08d9ff}
+.mini-help{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;font:7px "DM Mono";color:#aab0ca;margin-top:12px}
+.mini-help span{border:1px solid #3a4068;padding:6px 8px;background:#090d25}
+.color-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:13px}
+.goal-card{display:flex;align-items:center;gap:10px;color:#dfe5f4}.goal-card .goal-icon{display:grid;place-items:center;width:34px;height:34px;border:1px solid #8d35ff;color:#8d35ff;font-size:18px;box-shadow:0 0 12px #8d35ff44}.goal-card b{display:block;font:8px "DM Mono";color:#ffd11a;letter-spacing:.12em}.goal-card small{display:block;font:8px "DM Mono";color:#7e86a7;margin-top:4px}
+@media(max-width:700px){.color-head{align-items:start;flex-direction:column}.color-legend{justify-content:flex-start}.color-wrap{padding:12px;min-height:380px}.color-board{grid-template-columns:repeat(6,minmax(38px,1fr));gap:5px}.color-tile .tile-shape{font-size:19px}.color-tile small{display:none}.color-footer{align-items:flex-start;flex-direction:column}}
+
+/* =========================================================
+   MYSTIC FOREST V2 — clearer gameplay + forest visual
+   ========================================================= */
+.forest-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:14px}
+.forest-title{font-size:clamp(32px,5vw,58px);line-height:.82;margin:4px 0 9px}
+.forest-title span{color:#8cf126;text-shadow:4px 4px #102d18}
+.forest-sub{font:9px "DM Mono";color:#aab0ca;max-width:560px;line-height:1.7}
+.forest-stats{display:flex;gap:22px;text-align:center}
+.forest-stats small{display:block;font:7px "DM Mono";color:#7e86a7;margin-bottom:5px}.forest-stats b{font:14px "Press Start 2P";color:#8cf126}
+.forest-how{display:flex;align-items:center;justify-content:center;gap:12px;margin:4px auto 14px;padding:9px;border:1px solid #273052;background:#0a0f29;font:8px "DM Mono";color:#dfe5f4;max-width:650px}
+.forest-how span{display:flex;align-items:center;gap:6px}.forest-how b{display:grid;place-items:center;width:19px;height:19px;background:#8cf126;color:#08100a}.forest-how i{font-style:normal;color:#8d35ff;font-size:14px}
+.forest-wrap{position:relative;padding:18px;min-height:470px;background:radial-gradient(circle at 50% 40%,#173d2a 0,#0a1720 48%,#050a19 100%);border:1px solid #30345c;box-shadow:inset 0 0 45px #0009,0 0 0 5px #10132d;overflow:hidden}
+.forest-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 30%,#8cf12618,transparent 20%),radial-gradient(circle at 85% 70%,#8d35ff15,transparent 22%)}
+.forest-scene{position:relative;z-index:2;display:grid;grid-template-columns:repeat(6,minmax(52px,72px));gap:7px;justify-content:center;align-content:center;max-width:510px;margin:18px auto}
+.forest-cell{position:relative;aspect-ratio:1;border:1px solid #29483b;background:#0d211e;overflow:hidden;cursor:pointer;box-shadow:inset 0 0 18px #0009,0 4px 0 #050914;transition:.12s}
+.forest-cell:hover{border-color:#8cf126;transform:translateY(-2px)}
+.forest-ground{position:absolute;inset:5px;background:linear-gradient(135deg,#142c27,#0c1d1c);border:1px solid #1e4134}
+.forest-ground:before,.forest-ground:after{content:"";position:absolute;background:#24513b;opacity:.7}.forest-ground:before{width:3px;height:11px;left:15%;bottom:15%;transform:rotate(25deg)}.forest-ground:after{width:2px;height:8px;right:18%;top:20%;transform:rotate(-30deg)}
+.gem-cell .forest-ground{background:radial-gradient(circle,#416f2f,#10251f 65%);box-shadow:inset 0 0 20px #8cf12622}
+.forest-gem{position:absolute;inset:0;display:grid;place-items:center;color:#8cf126;font-size:25px;text-shadow:0 0 16px #8cf126;animation:forestGem 1.1s ease-in-out infinite alternate}
+@keyframes forestGem{to{transform:scale(1.18) rotate(10deg);filter:brightness(1.4)}}
+.forest-player{position:absolute;left:50%;top:50%;width:28px;height:34px;transform:translate(-50%,-50%);filter:drop-shadow(0 0 8px #08d9ff)}
+.forest-player:before{content:"";position:absolute;left:5px;top:0;width:18px;height:17px;border-radius:50%;background:#dfe5f4;border:2px solid #08d9ff}.forest-player:after{content:"";position:absolute;left:3px;top:16px;width:22px;height:15px;background:#8d35ff;border-radius:7px 7px 4px 4px}
+.forest-player i,.forest-player b{position:absolute;top:7px;width:4px;height:4px;background:#111936;z-index:2}.forest-player i{left:10px}.forest-player b{left:18px}
+.exit-cell .forest-ground{background:radial-gradient(circle,#4a1b70,#17122c 68%);border-color:#8d35ff}
+.forest-portal{position:absolute;inset:0;display:grid;place-items:center;color:#c46cff;font-size:27px;text-shadow:0 0 20px #8d35ff;animation:portalSpin 2s linear infinite}
+@keyframes portalSpin{to{transform:rotate(360deg)}}
+.gem-pop{animation:gemFlash .5s ease-out!important}.gem-pop .forest-gem{opacity:0}
+@keyframes gemFlash{50%{box-shadow:0 0 35px #8cf126, inset 0 0 25px #8cf126}}
+.forest-hud{position:absolute;z-index:3;left:18px;right:18px;top:12px;display:flex;justify-content:space-between;font:7px "DM Mono";color:#7e86a7}.forest-hud span:first-child{color:#8cf126}.forest-hud span.complete{color:#ffd11a;text-shadow:0 0 8px #ffd11a}
+.forest-popup{position:absolute;z-index:5;transform:translate(-50%,-50%);font:9px "Press Start 2P";color:#8cf126;text-shadow:2px 2px #07100a;animation:forestPop .7s ease-out forwards;pointer-events:none}
+@keyframes forestPop{to{transform:translate(-50%,-38px);opacity:0}}
+.forest-overlay{background:radial-gradient(circle,#101d24ee,#05091beF);backdrop-filter:blur(3px)}
+.forest-character.big{margin:0 auto 10px;width:52px;height:52px;border:2px solid #8cf126;border-radius:50%;display:grid;place-items:center;color:#8cf126;font-size:28px;box-shadow:0 0 22px #8cf12655;background:#10251a;animation:forestFloat 1.2s ease-in-out infinite alternate}
+@keyframes forestFloat{to{transform:translateY(-5px)}}
+.forest-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:13px}.forest-tip{display:flex;gap:10px;align-items:center}.forest-tip>span{display:grid;place-items:center;width:34px;height:34px;border:1px solid #8cf126;color:#8cf126;font-size:17px}.forest-tip b{display:block;font:8px "DM Mono";color:#ffd11a}.forest-tip small{display:block;font:8px "DM Mono";color:#7e86a7;margin-top:4px}
+@media(max-width:700px){.forest-head{align-items:start;flex-direction:column}.forest-stats{width:100%;justify-content:space-between}.forest-how{gap:7px;font-size:7px}.forest-scene{grid-template-columns:repeat(6,minmax(38px,1fr));gap:5px}.forest-wrap{padding:12px;min-height:390px}.forest-bottom{align-items:start;flex-direction:column}}
+
+/* =========================================================
+   MYSTIC FOREST V13.1 — viewport fit
+   Keeps the whole playable area visible on short laptop windows.
+   ========================================================= */
+@media (max-height:700px) and (min-width:701px){
+  .game-page{padding:20px 5vw 45px}
+  .game-heading{padding:12px 0 12px;gap:18px}
+  .game-heading h1{font-size:clamp(34px,4vw,48px);line-height:1.05;margin:7px 0}
+  .game-heading p{font-size:11px}
+  .forest-head{margin-bottom:8px;gap:16px}
+  .forest-title{font-size:38px;line-height:.78;margin:2px 0 6px}
+  .forest-sub{font-size:8px;line-height:1.4}
+  .forest-stats{gap:15px}
+  .forest-stats b{font-size:11px}
+  .forest-how{margin:2px auto 8px;padding:6px;gap:9px;font-size:7px}
+  .forest-how b{width:17px;height:17px}
+  .forest-wrap{min-height:350px;padding:12px}
+  .forest-scene{grid-template-columns:repeat(6,48px);gap:5px;max-width:none;margin:13px auto}
+  .forest-cell{min-width:0}
+  .forest-gem,.forest-portal{font-size:19px}
+  .forest-player{transform:translate(-50%,-50%) scale(.82)}
+  .forest-hud{top:8px;left:12px;right:12px;font-size:6px}
+  .forest-bottom{margin-top:8px}
+  .forest-tip small{font-size:7px}
+  .forest-tip>span{width:28px;height:28px}
+  .forest-bottom .action-btn{margin-top:0;padding:9px 13px}
+  .forest-overlay .small-title{font-size:20px}
+}
+@media (max-height:560px) and (min-width:701px){
+  .game-page{padding-top:10px;padding-bottom:25px}
+  .game-heading{padding:5px 0 8px}
+  .game-heading h1{font-size:32px;margin:3px 0}
+  .game-heading p{font-size:9px}
+  .forest-head{margin-bottom:5px}
+  .forest-title{font-size:30px}
+  .forest-sub{display:none}
+  .forest-wrap{min-height:315px}
+  .forest-scene{grid-template-columns:repeat(6,43px);gap:4px;margin:10px auto}
+  .forest-how{margin-bottom:5px}
+  .forest-bottom{display:none}
+}
+
+/* =========================================================
+   MYSTIC FOREST V14 — true fluid viewport layout
+   The game scales from desktop to phone without clipping.
+   ========================================================= */
+.forest-wrap{min-height:0;height:auto}
+.forest-scene{width:min(100%,510px);grid-template-columns:repeat(6,minmax(0,1fr));aspect-ratio:1/1;max-width:510px}
+.forest-cell{min-width:0}
+.forest-touch{display:none}
+
+/* Desktop/laptop: scale the entire game vertically according to available height. */
+@media (min-width:701px){
+  .game-page{padding-top:clamp(18px,4vh,55px);padding-bottom:clamp(35px,6vh,100px)}
+  .game-heading{padding:clamp(18px,4vh,45px) 0 clamp(12px,2.5vh,25px)}
+  .forest-head{margin-bottom:clamp(7px,1.5vh,14px)}
+  .forest-title{font-size:clamp(30px,5vw,58px)}
+  .forest-how{margin-bottom:clamp(7px,1.5vh,14px);padding:clamp(6px,1.2vh,9px)}
+  .forest-wrap{padding:clamp(10px,1.8vh,18px)}
+  .forest-scene{width:min(100%,510px,calc(100vh - 315px));margin:clamp(8px,1.5vh,18px) auto}
+  .forest-bottom{margin-top:clamp(7px,1.5vh,13px)}
+}
+
+/* Phone/tablet: width controls the board, height never clips it. */
+@media (max-width:700px){
+  .game-page{padding:24px 14px 50px}
+  .game-heading{padding:25px 0 16px}
+  .forest-head{gap:12px;margin-bottom:10px}
+  .forest-title{font-size:clamp(28px,11vw,48px)}
+  .forest-sub{font-size:8px;line-height:1.5}
+  .forest-stats{gap:10px}
+  .forest-stats b{font-size:10px}
+  .forest-how{width:100%;box-sizing:border-box;margin:4px 0 10px;padding:7px 5px;gap:7px;font-size:6px}
+  .forest-wrap{padding:10px;overflow:visible}
+  .forest-scene{width:min(100%,510px);margin:22px auto 10px;gap:4px}
+  .forest-cell{box-shadow:inset 0 0 12px #0009,0 2px 0 #050914}
+  .forest-gem,.forest-portal{font-size:clamp(16px,6vw,25px)}
+  .forest-player{transform:translate(-50%,-50%) scale(clamp(.7,2.3vw,1))}
+  .forest-bottom{margin-top:10px}
+  .forest-touch{display:flex;position:relative;z-index:8;flex-direction:column;align-items:center;gap:5px;margin:10px auto 0}
+  .forest-touch>button,.forest-touch>div>button{width:42px;height:38px;padding:0;border:1px solid #394269;background:#101735;color:#8cf126;font:16px "Press Start 2P";box-shadow:0 3px 0 #070a17;touch-action:manipulation}
+  .forest-touch>div{display:flex;gap:5px}
+  .forest-touch button:active{transform:translateY(2px);background:#193024;border-color:#8cf126}
+}
+
+/* MYSTIC FOREST V16 — inner game only */
+.clean-forest{width:min(760px,100%);margin:0 auto;padding:12px;border:1px solid #30345c;background:#070b1f;box-shadow:0 0 0 5px #10132d,10px 10px 0 #8d35ff}
+.clean-forest .forest-game-hud{display:grid;grid-template-columns:1fr 1fr 1fr;margin-bottom:9px;padding:8px 10px;background:#0c1030;border:1px solid #282d54}
+.clean-forest .forest-game-hud>div{text-align:center;border-right:1px solid #252a4c}.clean-forest .forest-game-hud>div:last-child{border:0}
+.clean-forest .forest-game-hud small{display:block;color:#7e86a7;font:7px "DM Mono";margin-bottom:4px}
+.clean-forest .forest-game-hud b{font:12px "Press Start 2P";color:#8cf126}.clean-forest .forest-game-hud>div:nth-child(2) b{color:#ffd11a}.clean-forest .forest-game-hud>div:nth-child(3) b{color:#08d9ff}
+.clean-forest .forest-board-wrap{position:relative;width:min(620px,100%);margin:auto;aspect-ratio:1;background:#081412;border:1px solid #29483b;overflow:hidden}
+.clean-forest .forest-scene{position:absolute;inset:2.5%;display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.clean-forest .forest-cell{position:relative;min-width:0;aspect-ratio:1;border:1px solid #29483b;background:#0d211e;overflow:hidden;cursor:pointer;padding:0}
+.clean-forest .forest-cell:hover{border-color:#8cf126;transform:translateY(-1px)}
+.clean-forest .forest-ground{position:absolute;inset:7%;background:linear-gradient(135deg,#142c27,#0c1d1c);border:1px solid #1e4134}
+.clean-forest .forest-ground:before,.clean-forest .forest-ground:after{content:"";position:absolute;background:#24513b;opacity:.7}
+.clean-forest .forest-ground:before{width:3px;height:11px;left:15%;bottom:15%;transform:rotate(25deg)}
+.clean-forest .forest-ground:after{width:2px;height:8px;right:18%;top:20%;transform:rotate(-30deg)}
+.clean-forest .forest-gem{position:absolute;inset:0;display:grid;place-items:center;color:#8cf126;font-size:clamp(16px,3vw,27px);text-shadow:0 0 15px #8cf126;animation:forestGem 1s ease-in-out infinite alternate}
+.clean-forest .forest-player{position:absolute;left:50%;top:50%;width:35%;height:50%;transform:translate(-50%,-50%);filter:drop-shadow(0 0 8px #08d9ff)}
+.clean-forest .forest-player:before{content:"";position:absolute;left:18%;top:0;width:64%;height:45%;border-radius:50%;background:#dfe5f4;border:2px solid #08d9ff}
+.clean-forest .forest-player:after{content:"";position:absolute;left:12%;top:40%;width:76%;height:45%;background:#8d35ff;border-radius:8px}
+.clean-forest .forest-player i,.clean-forest .forest-player b{position:absolute;top:18%;width:10%;height:10%;background:#111936;z-index:2}
+.clean-forest .forest-player i{left:35%}.clean-forest .forest-player b{left:55%}
+.clean-forest .forest-portal{position:absolute;inset:0;display:grid;place-items:center;color:#c46cff;font-size:clamp(18px,3vw,28px);text-shadow:0 0 18px #8d35ff;animation:portalSpin 2s linear infinite}
+.clean-forest .forest-overlay{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#05091bec;backdrop-filter:blur(3px)}
+.clean-forest .forest-overlay.hidden{display:none}
+.clean-forest .forest-character.big{width:46px;height:46px;border:2px solid #8cf126;border-radius:50%;display:grid;place-items:center;color:#8cf126;font-size:24px;box-shadow:0 0 20px #8cf12655;margin-bottom:10px}
+.clean-forest .forest-controls-note{text-align:center;color:#7e86a7;font:7px "DM Mono";padding:9px 0 3px}
+.clean-forest .forest-mini-tip{text-align:center;color:#8cf126;font:7px "DM Mono";border-top:1px solid #202747;padding-top:8px}
+.clean-forest .forest-mobile-controls{display:none}
+.clean-forest .forest-popup{position:absolute;z-index:10;transform:translate(-50%,-50%);font:8px "Press Start 2P";color:#8cf126;text-shadow:2px 2px #07100a;animation:forestPop .7s ease-out forwards;pointer-events:none}
+@media(max-width:700px){
+  .clean-forest{padding:7px;box-shadow:0 0 0 3px #10132d,5px 5px 0 #8d35ff}
+  .clean-forest .forest-game-hud{padding:6px 3px;margin-bottom:6px}
+  .clean-forest .forest-game-hud small{font-size:6px}.clean-forest .forest-game-hud b{font-size:8px}
+  .clean-forest .forest-scene{gap:3px}
+  .clean-forest .forest-controls-note{display:none}
+  .clean-forest .forest-mobile-controls{display:block;text-align:center;padding-top:6px}
+  .clean-forest .forest-mobile-controls>div{display:flex;justify-content:center}
+  .clean-forest .forest-mobile-controls button{width:42px;height:34px;margin:2px;background:#101638;border:1px solid #384066;color:#8cf126;font-size:13px}
+  .clean-forest .forest-mobile-controls button:active{background:#8cf126;color:#08100a}
+  .clean-forest .forest-mini-tip{font-size:6px;padding-top:6px}
+}
+
+/* DHØL ARCADE v1.0.0 — touch controls */
+.game-touch{display:none;justify-content:center;gap:8px;margin:10px auto 0}
+.game-touch button{min-width:48px;height:40px;padding:0 10px;background:#111638;border:1px solid #343b68;color:#fff;font:9px "DM Mono";touch-action:manipulation}
+.game-touch button:active{background:#8cf126;color:#07101b;transform:translateY(1px)}
+@media(max-width:700px){.game-touch{display:flex}.game-touch button{min-width:52px}.neon-touch,.sky-touch,.turbo-touch{display:flex}}
+
+/* v1.0.0 mobile safety */
+.game-canvas{touch-action:none;user-select:none;-webkit-user-select:none}
+.game-touch,.touch,.forest-mobile-controls{user-select:none;-webkit-user-select:none}
+@media(max-width:650px){
+  .game-page{padding-left:5vw;padding-right:5vw}
+  .cabinet{padding:10px;box-shadow:6px 6px 0 var(--purple)}
+}
+
+/* Pixel Snake v1.0.0 character polish */
+.snake-hint{margin:8px 0 12px;color:#8cf126;font:7px "DM Mono";letter-spacing:.04em}
