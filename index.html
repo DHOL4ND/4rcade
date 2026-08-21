@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b29">
+<meta name="description" content="DHØL ARCADE — a small browser arcade collection: nine free games, no account, no downloads, local high scores.">
+<meta property="og:title" content="DHØL ARCADE — Play. Explore. Repeat.">
+<meta property="og:description" content="A growing collection of small browser games made for quick sessions, friendly competition and a little nostalgia.">
+<meta property="og:type" content="website">
+<title>DHØL ARCADE — Play. Explore. Repeat.</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines"></div><div class="pixel-field" aria-hidden="true"></div>
+
+<header class="header">
+  <a class="logo" href="index.html"><span class="logo-mark">D</span><span>DHØL <b>ARCADE</b></span></a>
+  <nav>
+    <a class="active" href="index.html" aria-current="page">HOME</a>
+    <a href="#games">GAMES</a>
+    <a href="#top-rated">TOP RATED</a>
+    <a href="#lab">PLAYTEST LAB</a>
+    <a href="#about">ABOUT</a>
+  </nav>
+  <button class="menu">☰</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-shapes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-left">
+    <p class="kicker">INSERT COIN / 001</p>
+    <h1>PLAY.<br><span>EXPLORE.</span><br>REPEAT.</h1>
+    <p class="hero-copy">A growing collection of small browser games made for quick sessions, friendly competition and a little nostalgia.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="games.html">EXPLORE GAMES <b>→</b></a>
+      <a class="button secondary" href="#lab">PLAYTEST LAB</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-buddy">
+      <div class="mascot bit"><span class="m-antenna"></span><span class="m-head"><i class="m-eye l"></i><i class="m-eye r"></i></span><span class="m-body"></span></div>
+      <div class="buddy-bubble">3 NEW GAMES<br>JUST DROPPED!</div>
+    </div>
+    <div class="hero-machine">
+      <div class="machine-top"><span>DHØL / 001</span><span class="online-dot">● ONLINE</span></div>
+      <div class="screen">
+        <div class="screen-grid"></div>
+        <div class="space-stars">✦　·　✧　·　✦　·　·</div>
+        <div class="pixel-alien alien-a">◆◇◆</div>
+        <div class="pixel-alien alien-b">◆◇◆</div>
+        <div class="pixel-ship">
+          <span class="wing left"></span><span class="cockpit"></span><span class="body"></span><span class="wing right"></span><span class="engine"></span>
+        </div>
+        <div class="score">SCORE 004280</div>
+        <div class="screen-title">NEON<br>INVADERS</div>
+        <div class="press">PRESS ENTER TO PLAY</div>
+      </div>
+      <div class="machine-controls"><span class="joystick"></span><span class="machine-button pink"></span><span class="machine-button yellow"></span><span class="machine-button cyan"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="games">
+  <div class="section-head">
+    <div><span class="label">01 / COLLECTION</span><h2>BROWSE BY <em>GENRE</em></h2></div>
+    <p>Find something that matches your mood.</p>
+  </div>
+  <div class="genre-grid">
+    <article class="genre pink"><span class="genre-icon">✦</span><h3>ACTION</h3><p>Fast-paced games full of challenges and thrills.</p><a href="games.html#arcade">VIEW GAMES →</a></article>
+    <article class="genre lime"><span class="genre-icon">△</span><h3>ADVENTURE</h3><p>Explore, discover and embark on quests.</p><a href="games.html#adventure">VIEW GAMES →</a></article>
+    <article class="genre cyan"><span class="genre-icon">✚</span><h3>PUZZLE</h3><p>Test your brain with clever puzzles.</p><a href="games.html#puzzle">VIEW GAMES →</a></article>
+    <article class="genre yellow"><span class="genre-icon">▦</span><h3>ARCADE</h3><p>Classic-inspired games. Instant fun.</p><a href="games.html#arcade">VIEW GAMES →</a></article>
+    <article class="genre purple"><span class="genre-icon">⚔</span><h3>RPG</h3><p>Level up and go on epic journeys.</p><a href="games.html#arcade">VIEW GAMES →</a></article>
+    <article class="genre orange"><span class="genre-icon">◉</span><h3>SPORTS</h3><p>Compete and chase the high score.</p><a href="games.html#racing">VIEW GAMES →</a></article>
+  </div>
+</section>
+
+<section class="section trending" id="top-rated">
+  <div class="section-head">
+    <div><span class="label">02 / PLAY NOW</span><h2>TRENDING <em>NOW</em></h2></div>
+    <a class="see-all" href="games.html">VIEW ALL →</a>
+  </div>
+  <div class="game-cards">
+    <a class="game-card" href="game.html?game=neon">
+      <div class="game-art neon"><span>NEON</span><b>INVADERS</b><i>▲</i></div>
+      <div class="card-info"><div><h3>Neon Invaders</h3><p>SHOOTER · ARCADE</p></div><strong>★ 4.9</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=forest">
+      <div class="game-art forest"><span>MYSTIC</span><b>FOREST</b><i>◆</i></div>
+      <div class="card-info"><div><h3>Mystic Forest</h3><p>ADVENTURE</p></div><strong>★ 4.6</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=color">
+      <div class="game-art blocks"><span>COLOR</span><b>SWAP</b><i>▦</i></div>
+      <div class="card-info"><div><h3>Color Swap</h3><p>PUZZLE</p></div><strong>★ 4.5</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=sky">
+      <div class="game-art sky"><span>SKY</span><b>BOUND</b><i>▲</i></div>
+      <div class="card-info"><div><h3>Skybound</h3><p>PLATFORMER</p></div><strong>★ 4.7</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=turbo">
+      <div class="game-art road"><span>TURBO</span><b>DASH</b><i>●</i></div>
+      <div class="card-info"><div><h3>Turbo Dash</h3><p>RACING</p></div><strong>★ 4.4</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=runner">
+      <div class="game-art stars"><span>STAR</span><b>RUNNER</b><i>★</i></div>
+      <div class="card-info"><div><h3>Star Runner</h3><p>ARCADE · NEW</p></div><strong>★ 4.8</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=bubble">
+      <div class="game-art bubbles"><span>BUBBLE</span><b>BURST</b><i>●</i></div>
+      <div class="card-info"><div><h3>Bubble Burst</h3><p>PUZZLE · NEW</p></div><strong>★ 4.6</strong></div>
+    </a>
+    <a class="game-card" href="game.html?game=croak">
+      <div class="game-art swamp"><span>CROAK</span><b>HOP</b><i>◆</i></div>
+      <div class="card-info"><div><h3>Croak Hop</h3><p>ADVENTURE · NEW</p></div><strong>★ 4.7</strong></div>
+    </a>
+  </div>
+</section>
+
+<section class="section crew" id="crew">
+  <div class="section-head">
+    <div><span class="label">03 / MASCOTS</span><h2>MEET THE <em>CREW</em></h2></div>
+    <p>The pixel pals watching over your high scores.</p>
+  </div>
+  <div class="crew-grid">
+    <article class="crew-card">
+      <div class="mascot bit"><span class="m-antenna"></span><span class="m-head"><i class="m-eye l"></i><i class="m-eye r"></i></span><span class="m-body"></span></div>
+      <h3>BIT</h3><p>Keeps every high score honest.</p>
+    </article>
+    <article class="crew-card">
+      <div class="mascot glow"><span class="m-head"><i class="m-eye l"></i><i class="m-eye r"></i></span><span class="m-tail"></span></div>
+      <h3>GLOW</h3><p>Haunts the Playtest Lab for fun.</p>
+    </article>
+    <article class="crew-card">
+      <div class="mascot spark"><span class="m-antenna"></span><span class="m-head"><i class="m-eye l"></i><i class="m-eye r"></i></span><span class="m-body"></span></div>
+      <h3>SPARK</h3><p>Powers up every new release.</p>
+    </article>
+    <article class="crew-card">
+      <div class="mascot rex"><span class="m-head"><i class="m-eye l"></i><i class="m-eye r"></i></span><span class="m-body"></span><span class="m-tail"></span></div>
+      <h3>REX</h3><p>Turbo Dash's biggest fan.</p>
+    </article>
+  </div>
+</section>
+
+<section class="lab" id="lab">
+  <div class="lab-icon">⌁</div>
+  <div><span class="label">04 / COMMUNITY</span><h2>HELP MAKE THESE GAMES BETTER.</h2><p>Try games in progress and give feedback in the Playtest Lab.</p></div>
+  <a class="button lab-button" href="#lab">VISIT PLAYTEST LAB →</a>
+</section>
+
+<section class="about" id="about">
+  <span class="label">05 / ABOUT</span>
+  <div><h2>BUILT FOR<br>THE LOVE<br>OF PLAY.</h2><p>DHØL is a small independent collection of browser games, experiments and interactive ideas.</p></div>
+</section>
+</main>
+
+<footer><div>♥<span> MADE FOR PLAY.<br>PLAYED BY YOU.<br>POWERED BY CREATIVITY.</span></div><strong>DHØL.</strong><div><a href="#about">ABOUT</a> · <a href="games.html">GAMES</a> · <a href="#lab">PLAYTEST LAB</a></div></footer>
+<script src="app.js"></script></body>
+</html>
